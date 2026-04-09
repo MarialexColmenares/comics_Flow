@@ -1,0 +1,134 @@
+/* NaVb */
+
+.navbar {
+  background-color: transparent;
+  border-bottom: 3px solid var(--accent-color);
+  color: var(--text-white);
+  font-family: "Arial Black", sans-serif;
+  position: fixed;
+  top: 0;
+  right: 40px;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* Estilo del Logo */
+.nav-logo {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.logo-accent {
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+/* Links Desktop */
+.nav-links-desktop {
+  display: none; /* Oculto en móvil */
+}
+
+.nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #be7070;
+}
+
+/* Botón Móvil */
+.nav-mobile-btn button {
+  background: none;
+  border: 2px solid var(--accent-color);
+  color: var(--text-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Menú Móvil desplegable */
+.nav-links-mobile {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-link-mobile {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+
+  .nav-mobile-btn {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: none;
+  }
+}
+
+Separadores .ticks-container {
+  width: 100%;
+  margin: 40px 0; /* Espacio arriba y abajo del separador */
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border); /* La línea horizontal */
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px; /* Ajustado para que quede centrado sobre la línea de 1px */
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
